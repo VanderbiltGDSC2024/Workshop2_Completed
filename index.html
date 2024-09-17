@@ -21,6 +21,13 @@
         <div class="about">
             <h3 class="section">About Me</h3>
             <div>I am currently a freshman at Vanderbilt University studying computer science from Nashville, TN. I am interested in software development.</div>
+            <div style="margin-top: 20px;">
+                <button class="mdc-button mdc-button--raised" id="resumeButton">
+                    <div class="mdc-button__ripple"></div>
+                    View My Resume
+                </button>
+            </div>
+
         </div>
     </div>
 
@@ -118,6 +125,10 @@
         }
 
         renderProjects();
+
+        document.getElementById('resumeButton').addEventListener('click', function() {
+            window.open("assets/Rob_Banks_Resume.pdf", target="_blank")
+        })
 
         mdc.ripple.MDCRipple.attachTo(document.querySelector('.mdc-button'));
     </script>
